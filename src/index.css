@@ -1,13 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;   
+}
+a {
+  outline: none;
+  text-decoration: none;
+}
+.projects {
+  padding: 0 .5em;
+  background-color: #1A1D26;
+  height: 100vh;
+}
+.projects_header {
+  padding: .5em;
+  display: flex;
+  justify-content: space-between;
+}
+.projects_title {
+  font-size: 2em;
+  font-weight: 600;
+  background-image: linear-gradient(45deg, #1037EE, #027FF0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;    
+}
+.projects_subtitle{
+  font-size: 2em;
+  font-weight: 600;
+  display: block;
+  margin-top: -.5em;
+  color: #fff;
+}
+.projects_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.project_container {
+  margin: 10em 0;
+  padding: 1em;
+  color: #fff;
+  width: 300px;
+  height: 150px;
+  background-color: #006BFF;
+  border-radius: 10px;
+  transition: all 1s;
+  
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+.project_container:hover {
+  position: relative;
+  color: #006BFF;
+  width: 400px;
+  height: 250px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+

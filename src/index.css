@@ -37,7 +37,7 @@ a {
       opacity: 0;
     }
     to {
-      transform: translateX(5vw);
+      transform: translateX(2vw);
       opacity: 1;
     }
   }    
@@ -78,6 +78,40 @@ a {
       transform: translateX(0vw);
   }
 }
+.projects_title {
+  font-size: 3em;
+  font-weight: 600;
+  background-image: linear-gradient(45deg, #1037EE, #027FF0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;    
+}
+.projects_subtitle {
+  font-size: 2em;
+  font-weight: 600;
+  display: block;
+  margin-top: -.5em;
+  color: #fff;
+}
+.projects_techno {
+  position: relative;
+  z-index: 2;
+  font-size: 1em;
+  font-weight: 600;
+  background-image: linear-gradient(45deg, #1037EE, #027FF0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;    
+}
+.projects_subtechno {
+  position: relative;
+  z-index: 2;
+  font-size: 1em;
+  font-weight: 600;
+  display: block;
+  margin-top: -.5em;
+  color: #fff;
+}
 .projects_image_wrapper {
   display: flex;
   flex-direction: row-reverse;
@@ -93,7 +127,7 @@ a {
   width: 650px;
   height: 350px;
   border-radius: 15px;
-  bottom: 2em;
+  bottom: 4em;
 }
 .projects_image_left {
   position: relative;
@@ -103,7 +137,6 @@ a {
   border-radius: 15px;
   
 }
-
 .projects_image_in {
   
   animation: linear ;
@@ -132,9 +165,7 @@ a {
       transform: translateX(0vw) translateY(0vw);
       
     }
-  }
-
-  
+  }  
 .projects_image_out {
   animation: linear ;
   -webkit-animation:linear ;
@@ -161,40 +192,8 @@ a {
       transform: translateX(100vw);
     }
   }
-.projects_title {
-  font-size: 2em;
-  font-weight: 600;
-  background-image: linear-gradient(45deg, #1037EE, #027FF0);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;    
-}
-.projects_subtitle {
-  font-size: 2em;
-  font-weight: 600;
-  display: block;
-  margin-top: -.5em;
-  color: #fff;
-}
-.projects_title_right {
-  position: relative;
-  z-index: 2;
-  font-size: 2em;
-  font-weight: 600;
-  background-image: linear-gradient(45deg, #1037EE, #027FF0);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;    
-}
-.projects_subtitle_right {
-  position: relative;
-  z-index: 2;
-  font-size: 1em;
-  font-weight: 600;
-  display: block;
-  margin-top: -.5em;
-  color: #fff;
-}
+
+
 .projects_container {
   display: flex;
   justify-content: space-between;

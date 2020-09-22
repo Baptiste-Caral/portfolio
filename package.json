@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "gsap": "^3.4.2",
     "http-proxy": "^1.18.1",
+    "infinite-react-carousel": "^1.2.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.10.0",

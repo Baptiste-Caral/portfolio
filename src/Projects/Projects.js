@@ -1,44 +1,49 @@
+/* eslint-disable react/jsx-no-target-blank */
 import React, {useState, useEffect} from 'react'
 import { gsap } from 'gsap'
-import img from '../assets/images/img.png'
+import ozone from '../assets/images/ozone.png'
 import pdf from '../assets/images/pdf.png'
 import timer from '../assets/images/timer.png'
-import velo from '../assets/images/velo.png'
-import Slider from 'infinite-react-carousel';
+import pwero from '../assets/images/pwero.png'
+import { FaEye } from 'react-icons/fa'
+import { BsArrowRight } from 'react-icons/bs'
+import { FaReact } from 'react-icons/fa'
+import { SiMaterialUi } from 'react-icons/si'
+import { FaNodeJs } from 'react-icons/fa'
+import { SiJavascript } from 'react-icons/si'
+import { SiCss3 } from 'react-icons/si'
+import { FaGithubAlt } from 'react-icons/fa'
 
 
 function Projects() {
-
+  
+  
   const [width, setWidth] = useState(window.innerWidth)
-  let rows = 4
   useEffect(() => {
     const handleResize = () =>setWidth(window.innerWidth)
     window.addEventListener('resize', handleResize)
     console.log(width);
   },[width])
   
-  if(width < 980) {
-    rows = 3
-  } 
-  if (width < 780) {
-    rows = 2
-  }
-  if (width < 480) {
-    rows = 1
-  }
-
-
-  
   const projects = [{
     id: 1,
-    image: img,
+    image: ozone,
     screenshot: '',
     title: 'oZone',
     techno: 'Redux',
     subtechno: 'école O\'Clock',
     description: 'Projet écologique.',
-    linkGitHub: 'https://github.com/Baptiste-Caral',
-    linkProject: 'https://app.elizay.com'
+    linkGitHub: 'https://github.com/ssiohan/ozone-frontend',
+    linkProject: 'https://ozone.best/',
+    classname: 'ozone',
+    stack: 'Front-end / React',
+    techno1Icon: FaReact,
+    techno1Color: '#61DBFB',
+    techno2Icon: SiMaterialUi,
+    techno2Color: '#0081CB',
+    resume: 'Méthode',
+    resume2: 'Agile'
+    
   },
   {
     id: 2,
@@ -49,7 +54,16 @@ function Projects() {
     subtechno: 'Mission Freelance',
     description: 'Gestion de patrimoine.',
     linkGitHub: 'https://github.com/Baptiste-Caral',
-    linkProject: 'https://app.elizay.com'
+    linkProject: 'https://app.elizay.com',
+    classname: 'pdf',
+    stack: 'Front-end / React',
+    techno1Icon: FaReact,
+    techno1Color: '#61DBFB',
+    techno2Icon: SiMaterialUi,
+    techno2Color: '#0081CB',
+    resume: 'Mission',
+    resume2: 'Freelance'
+    
   },
   {
     id: 3,
@@ -59,19 +73,37 @@ function Projects() {
     techno: 'Pure Vanilla Js',
     subtechno: 'Projet perso',
     description: 'Neumorphism.',
-    linkGitHub: 'https://github.com/Baptiste-Caral',
-    linkProject: 'https://app.elizay.com'
+    linkGitHub: 'https://github.com/Baptiste-Caral/timer',
+    linkProject: 'https://jhonnytimer.web.app/',
+    classname: 'timer',
+    stack: 'Front-end / Js',
+    techno1Icon: SiJavascript,
+    techno1Color: '#EFD81D',
+    techno2Icon: SiCss3,
+    techno2Color: '#254ADD',
+    resume: 'Projet',
+    resume2: 'Personnel'
+
   },
   {
     id: 4,
-    image: velo,
+    image: pwero,
     screenshot: '',
-    title: 'Movie & Me',
-    techno: 'React-Native',
-    subtechno: 'Projet perso',
-    description: 'App Mobile.',
-    linkGitHub: 'https://github.com/Baptiste-Caral',
-    linkProject: 'https://app.elizay.com'
+    title: 'Trainer',
+    techno: 'MERN',
+    subtechno: 'Mongo Db',
+    description: 'Web app.',
+    linkGitHub: 'https://github.com/Baptiste-Caral/pwero',
+    linkProject: 'http://pwero-9b223.web.app/',
+    classname: 'pwero',
+    stack: 'FullStack Js',
+    techno1Icon: FaReact,
+    techno1Color: '#61DBFB',
+    techno2Icon: FaNodeJs,
+    techno2Color: '#75AE62',
+    resume: 'Application de',
+    resume2: 'Musculation'
+
   },
   
 ]
@@ -82,7 +114,7 @@ const [index2, setIndex2] = useState(0)
 const handleOnClick = (index) => { 
   
   
-  gsap.fromTo('.projects_image', {duration: .5, x:0, y:0}, {duration: .5, x:850,y:300})
+  gsap.fromTo('.projects_image_container', {duration: .5, x:0, y:0}, {duration: .5, x:850,y:300})
   gsap.fromTo('.projects_headertruc', {duration: .5, x:0, y:0}, {duration: 1, x:-650,y:0})
   
   setIndex2(index);
@@ -90,56 +122,79 @@ const handleOnClick = (index) => {
 
     setIndex(index);
     
-    gsap.fromTo('.projects_image',{duration: .5, x:850,y:200}, {duration: .5, x:0, y:0})
+    gsap.fromTo('.projects_image_container',{duration: .5, x:850,y:200}, {duration: .5, x:0, y:0})
     gsap.fromTo('.projects_headertruc',{duration: .5, x:-650,y:0}, {duration: .5, x:0, y:0})
   }, 550);
 }
 
-const settings =  {
-  autoplay: true,
-  adaptiveHeight: true,
-  slidesToShow: rows,
-  dots: true,
-  
-};
 return (
   
   <div className="projects">
       {/* Head & Image container */}
       <div className="projects_header_container">
         <div className="projects_header">
-          <p className="projects_headertruc">
+          <div className="projects_headertruc">
             <span className="projects_title">{projects[index].title}</span>
             <span className="projects_subtitle">{projects[index].description}</span>
             <span className="projects_techno">{projects[index].techno}</span>
             <span className="projects_subtechno">{projects[index].subtechno}</span>
-          </p>
+            <div className="projects_visit-container">
+              <a href={projects[index].linkProject} target="_blank">
+                <div className="projects_visit">
+                    <div className="circle_blue">
+                      <BsArrowRight size="20"/>
+                    </div>
+                    <span>Visiter</span>
+                </div>
+              </a>
+            </div>
+            </div>
           <div className="projects_image_wrapper">
             <div className="projects_image_container">
-              <img className="projects_image" src={projects[index].image} alt={projects[index].image}/> 
+              <img className={`projects_image projects_image_${projects[index].classname}`} src={projects[index].image} alt={projects[index].image}/> 
             </div>  
           </div>
         </div>
       </div>
       {/* Projects container */}
-    
-      <div >
-        <Slider beforeChange={(index) => handleOnClick(index)} { ...settings }>         
+      <div className="projects_container">       
           {projects.map((project, i) => 
-            <div key={i} className="project_container">
-              {index2 !== i && <div className="project_content" onClick={() => handleOnClick(i)}>
-                <h3>{project.title}</h3>
-                <h5><a href={project.linkProject}>Visiter le site</a></h5>
-                <h5><a href={project.linkGitHub}>Voir le projet sur gitHub</a></h5>
-              </div>}
-              {index2 === i&& <div className="project_content2" onClick={() => handleOnClick(i)}>
-                <h3>{project.title}</h3>
-                <h5><a href={project.linkProject}>Visiter le site</a></h5>
-                <h5><a href={project.linkGitHub}>Voir le projet sur gitHub</a></h5>
-              </div>}
+          <div key={i} className="project_container">
+            {index2 !== i &&
+            <div className="project_content" onClick={() => handleOnClick(i)}>
+              <h3>{project.title}</h3>
+              <h5>{project.stack}</h5>
+              <div className="circle">
+                <FaEye color="#000"/>
+              </div>
+            </div>}
+            {index2 === i &&
+            <div className="project_content2-container">
+              <div className="project_content2">
+                <div className="project_content2_left">
+                  <h3 className="project_content2_title">{project.title}</h3>
+                  <h5>{project.resume}</h5>
+                  <h5>{project.resume2}</h5>
+                </div>
+                <div className="project_content2_right">
+                  <project.techno1Icon size="100" color={project.techno1Color}/>
+                  <project.techno2Icon size="100" color={project.techno2Color}/>
+                </div>
+              </div>
+              <a href={projects[index].linkGitHub} target="_blank">
+                <div className="project_github">
+                <div className="circle_blue">
+
+                    <FaGithubAlt size="24" color="#FFF"/>
+                </div> 
+                  <span>Github</span>
+                </div>
+              </a>
+            </div>
+              }
             </div>
           )}
-        </Slider>
+      
       </div>
     </div>
   );

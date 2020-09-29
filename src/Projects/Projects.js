@@ -1,10 +1,15 @@
 /* eslint-disable react/jsx-no-target-blank */
 import React, {useState, useEffect} from 'react'
 import { gsap } from 'gsap'
+
+// Images
 import ozone from '../assets/images/ozone.png'
 import pdf from '../assets/images/pdf.png'
 import timer from '../assets/images/timer.png'
 import pwero from '../assets/images/pwero.png'
+
+
+// Icons
 import { FaEye } from 'react-icons/fa'
 import { BsArrowRight } from 'react-icons/bs'
 import { FaReact } from 'react-icons/fa'
@@ -12,7 +17,10 @@ import { SiMaterialUi } from 'react-icons/si'
 import { FaNodeJs } from 'react-icons/fa'
 import { SiJavascript } from 'react-icons/si'
 import { SiCss3 } from 'react-icons/si'
+import { SiRedux } from 'react-icons/si'
+import { SiAngular } from 'react-icons/si'
 import { FaGithubAlt } from 'react-icons/fa'
+
 
 
 function Projects() {
@@ -25,89 +33,111 @@ function Projects() {
     console.log(width);
   },[width])
   
-  const projects = [{
-    id: 1,
-    image: ozone,
-    screenshot: '',
-    title: 'oZone',
-    techno: 'Redux',
-    subtechno: 'école O\'Clock',
-    description: 'Projet écologique.',
-    linkGitHub: 'https://github.com/ssiohan/ozone-frontend',
-    linkProject: 'https://ozone.best/',
-    classname: 'ozone',
-    stack: 'Front-end / React',
-    techno1Icon: FaReact,
-    techno1Color: '#61DBFB',
-    techno2Icon: SiMaterialUi,
-    techno2Color: '#0081CB',
-    resume: 'Méthode',
-    resume2: 'Agile'
+  const projects = [
+    {
+      id: 1,
+      image: pwero,
+      screenshot: '',
+      title: 'Trainer',
+      techno: 'Projet Perso MERN',
+      subtechno: 'Mongo Db, Express, React, Node',
+      description: 'Web app',
+      linkGitHub: 'https://github.com/Baptiste-Caral/pwero',
+      linkProject: 'http://pwero-9b223.web.app/',
+      classname: 'pwero',
+      stack: 'FullStack Js',
+      techno1Icon: FaReact,
+      techno1Color: '#61DBFB',
+      techno2Icon: FaNodeJs,
+      techno2Color: '#75AE62',
+      resume: 'Application de',
+      resume2: 'Musculation'
     
-  },
-  {
-    id: 2,
-    image: pdf,
-    screenshot: '',
-    title: 'Générateur de Pdf',
-    techno: 'React Hooks',
-    subtechno: 'Mission Freelance',
-    description: 'Gestion de patrimoine.',
-    linkGitHub: 'https://github.com/Baptiste-Caral',
-    linkProject: 'https://app.elizay.com',
-    classname: 'pdf',
-    stack: 'Front-end / React',
-    techno1Icon: FaReact,
-    techno1Color: '#61DBFB',
-    techno2Icon: SiMaterialUi,
-    techno2Color: '#0081CB',
-    resume: 'Mission',
-    resume2: 'Freelance'
+    },
+    {
+      id: 2,
+      image: pdf,
+      screenshot: '',
+      title: 'Générateur de Pdf',
+      techno: 'Mission Freelance',
+      subtechno: 'React, MaterialUI, Keycloack, JWT',
+      description: 'Gestion de patrimoine',
+      linkGitHub: 'https://github.com/Baptiste-Caral',
+      linkProject: 'https://app.elizay.com',
+      classname: 'pdf',
+      stack: 'Front-end / React',
+      techno1Icon: FaReact,
+      techno1Color: '#61DBFB',
+      techno2Icon: SiMaterialUi,
+      techno2Color: '#0081CB',
+      resume: 'Mission',
+      resume2: 'Freelance'
+      
+    },
+    {
+      id: 3,
+      image: ozone,
+      screenshot: '',
+      title: 'oZone',
+      techno: "Projet de fin d'études O'Clock",
+      subtechno: 'React, Redux, MaterialUI, JWT',
+      description: 'Projet écologique',
+      linkGitHub: 'https://github.com/ssiohan/ozone-frontend',
+      linkProject: 'https://ozone.best/',
+      classname: 'ozone',
+      stack: 'Front-end / React',
+      techno1Icon: FaReact,
+      techno1Color: '#61DBFB',
+      techno2Icon: SiRedux,
+      techno2Color: '#7248B6',
+      resume: 'Méthode',
+      resume2: 'Agile'
+      
+    },
+    {
+      id: 4,
+      image: timer,
+      screenshot: '',
+      title: 'Timer',
+      techno: 'Projet perso',
+      subtechno: 'Pure Vanilla Js',
+      description: 'Neumorphism',
+      linkGitHub: 'https://github.com/Baptiste-Caral/timer',
+      linkProject: 'https://jhonnytimer.web.app/',
+      classname: 'timer',
+      stack: 'Front-end / Js',
+      techno1Icon: SiJavascript,
+      techno1Color: '#EFD81D',
+      techno2Icon: SiCss3,
+      techno2Color: '#254ADD',
+      resume: 'Projet',
+      resume2: 'Personnel'
+      
+    },
+    {
+      id: 5,
+      image: timer,
+      screenshot: '',
+      title: 'Apprendre Angular',
+      techno: 'Projet perso',
+      subtechno: 'Angular',
+      description: 'Udemy',
+      linkGitHub: 'https://github.com/Baptiste-Caral/timer',
+      linkProject: 'https://jhonnytimer.web.app/',
+      classname: 'timer',
+      stack: 'Front-end / Angular',
+      techno1Icon: SiAngular,
+      techno1Color: '#DD0031',
+      techno2Icon: SiJavascript,
+      techno2Color: '#EFD81D',
+      resume: 'Coming',
+      resume2: 'Soon !!!'
+      
+    }
     
-  },
-  {
-    id: 3,
-    image: timer,
-    screenshot: '',
-    title: 'Timer',
-    techno: 'Pure Vanilla Js',
-    subtechno: 'Projet perso',
-    description: 'Neumorphism.',
-    linkGitHub: 'https://github.com/Baptiste-Caral/timer',
-    linkProject: 'https://jhonnytimer.web.app/',
-    classname: 'timer',
-    stack: 'Front-end / Js',
-    techno1Icon: SiJavascript,
-    techno1Color: '#EFD81D',
-    techno2Icon: SiCss3,
-    techno2Color: '#254ADD',
-    resume: 'Projet',
-    resume2: 'Personnel'
-
-  },
-  {
-    id: 4,
-    image: pwero,
-    screenshot: '',
-    title: 'Trainer',
-    techno: 'MERN',
-    subtechno: 'Mongo Db',
-    description: 'Web app.',
-    linkGitHub: 'https://github.com/Baptiste-Caral/pwero',
-    linkProject: 'http://pwero-9b223.web.app/',
-    classname: 'pwero',
-    stack: 'FullStack Js',
-    techno1Icon: FaReact,
-    techno1Color: '#61DBFB',
-    techno2Icon: FaNodeJs,
-    techno2Color: '#75AE62',
-    resume: 'Application de',
-    resume2: 'Musculation'
-
-  },
+    
+  ]
   
-]
-
 const [index, setIndex] = useState(0)
 const [index2, setIndex2] = useState(0)
 
@@ -135,7 +165,7 @@ return (
         <div className="projects_header">
           <div className="projects_headertruc">
             <span className="projects_title">{projects[index].title}</span>
-            <span className="projects_subtitle">{projects[index].description}</span>
+            <span className="projects_subtitle">{projects[index].description}.</span>
             <span className="projects_techno">{projects[index].techno}</span>
             <span className="projects_subtechno">{projects[index].subtechno}</span>
             <div className="projects_visit-container">
@@ -162,11 +192,17 @@ return (
           <div key={i} className="project_container">
             {index2 !== i &&
             <div className="project_content" onClick={() => handleOnClick(i)}>
+            <div>
               <h3>{project.title}</h3>
               <h5>{project.stack}</h5>
               <div className="circle">
                 <FaEye color="#000"/>
               </div>
+            </div>
+            <div className="project_content_icon">
+                  <project.techno1Icon color="#254ADD"/>
+                  <project.techno2Icon color="#254ADD"/>
+                </div>
             </div>}
             {index2 === i &&
             <div className="project_content2-container">
@@ -177,15 +213,14 @@ return (
                   <h5>{project.resume2}</h5>
                 </div>
                 <div className="project_content2_right">
-                  <project.techno1Icon size="100" color={project.techno1Color}/>
-                  <project.techno2Icon size="100" color={project.techno2Color}/>
+                  <project.techno1Icon color={project.techno1Color}/>
+                  <project.techno2Icon color={project.techno2Color}/>
                 </div>
               </div>
               <a href={projects[index].linkGitHub} target="_blank">
                 <div className="project_github">
-                <div className="circle_blue">
-
-                    <FaGithubAlt size="24" color="#FFF"/>
+                <div className="circle_cards_blue">
+                    <FaGithubAlt color="#FFF"/>
                 </div> 
                   <span>Github</span>
                 </div>

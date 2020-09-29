@@ -9,7 +9,7 @@ function nav() {
         <div className="nav_left_line">-</div>
       </div>
       <div className="nav_center"> 
-        <div>Portfolio de Baptiste Caral-Villa</div>  
+        <div>Hello World !</div>  
       </div>
       <div className="nav_right">
         <ul>

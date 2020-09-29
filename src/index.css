@@ -156,21 +156,28 @@ a {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
+  position: absolute;
+  right: 0;
 }
 .projects_image_container {
   display: flex;
   justify-content: flex-end;
 }
 .projects_image {
-  width: 600px;
-  height: 300px;
+  width: 700px;
+  height: 350px;
   border-radius: 15px;
 }
 .projects_image_pwero {
-  width: 350px;
-  height: 300px;
-  border-radius: 15px;
+  width: 450px;
+  height: 400px;
+  
 }
+/* .projects_image_pdf {
+  width: 600px;
+  height: 500px;
+  
+} */
 .projects_image_left { 
   width: 300px;
   height: 200px;

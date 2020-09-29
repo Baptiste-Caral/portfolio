@@ -4,9 +4,10 @@ import { gsap } from 'gsap'
 
 // Images
 import ozone from '../assets/images/ozone.png'
-import pdf from '../assets/images/pdf.png'
-import timer from '../assets/images/timer.png'
+import pdf from '../assets/images/pdf3.png'
+import timer from '../assets/images/timer2.png'
 import pwero from '../assets/images/pwero.png'
+import angular from '../assets/images/angular.png'
 
 
 // Icons
@@ -21,8 +22,6 @@ import { SiRedux } from 'react-icons/si'
 import { SiAngular } from 'react-icons/si'
 import { FaGithubAlt } from 'react-icons/fa'
 
-
-
 function Projects() {
   
   
@@ -36,6 +35,26 @@ function Projects() {
   const projects = [
     {
       id: 1,
+      image: ozone,
+      screenshot: '',
+      title: 'oZone',
+      techno: "Projet de fin d'études O'Clock",
+      subtechno: 'React, Redux, MaterialUI, JWT',
+      description: 'Projet écologique',
+      linkGitHub: 'https://github.com/ssiohan/ozone-frontend',
+      linkProject: 'https://ozone.best/',
+      classname: 'ozone',
+      stack: 'Front-end / React',
+      techno1Icon: FaReact,
+      techno1Color: '#61DBFB',
+      techno2Icon: SiRedux,
+      techno2Color: '#7248B6',
+      resume: 'Méthode',
+      resume2: 'Agile'
+      
+    },
+    {
+      id: 2,
       image: pwero,
       screenshot: '',
       title: 'Trainer',
@@ -55,7 +74,7 @@ function Projects() {
     
     },
     {
-      id: 2,
+      id: 3,
       image: pdf,
       screenshot: '',
       title: 'Générateur de Pdf',
@@ -74,26 +93,7 @@ function Projects() {
       resume2: 'Freelance'
       
     },
-    {
-      id: 3,
-      image: ozone,
-      screenshot: '',
-      title: 'oZone',
-      techno: "Projet de fin d'études O'Clock",
-      subtechno: 'React, Redux, MaterialUI, JWT',
-      description: 'Projet écologique',
-      linkGitHub: 'https://github.com/ssiohan/ozone-frontend',
-      linkProject: 'https://ozone.best/',
-      classname: 'ozone',
-      stack: 'Front-end / React',
-      techno1Icon: FaReact,
-      techno1Color: '#61DBFB',
-      techno2Icon: SiRedux,
-      techno2Color: '#7248B6',
-      resume: 'Méthode',
-      resume2: 'Agile'
-      
-    },
+    
     {
       id: 4,
       image: timer,
@@ -116,7 +116,7 @@ function Projects() {
     },
     {
       id: 5,
-      image: timer,
+      image: angular,
       screenshot: '',
       title: 'Apprendre Angular',
       techno: 'Projet perso',

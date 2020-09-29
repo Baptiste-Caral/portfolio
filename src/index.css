@@ -164,20 +164,14 @@ a {
   justify-content: flex-end;
 }
 .projects_image {
-  width: 700px;
-  height: 350px;
+  width: 42vw;
+  height: 25vw;
   border-radius: 15px;
 }
 .projects_image_pwero {
-  width: 450px;
-  height: 400px;
-  
+  width: 35vw;
+  height: 58vh; 
 }
-/* .projects_image_pdf {
-  width: 600px;
-  height: 500px;
-  
-} */
 .projects_image_left { 
   width: 300px;
   height: 200px;

@@ -20,6 +20,7 @@ import { SiJavascript } from 'react-icons/si'
 import { SiCss3 } from 'react-icons/si'
 import { SiRedux } from 'react-icons/si'
 import { SiAngular } from 'react-icons/si'
+
 import { FaGithubAlt } from 'react-icons/fa'
 
 function Projects() {
@@ -119,7 +120,7 @@ function Projects() {
       image: angular,
       screenshot: '',
       title: 'Apprendre Angular',
-      techno: 'Projet perso',
+      techno: 'Formation',
       subtechno: 'Angular',
       description: 'Udemy',
       linkGitHub: 'https://github.com/Baptiste-Caral/timer',
@@ -130,8 +131,8 @@ function Projects() {
       techno1Color: '#DD0031',
       techno2Icon: SiJavascript,
       techno2Color: '#EFD81D',
-      resume: 'Coming',
-      resume2: 'Soon !!!'
+      resume: 'Formation',
+      resume2: 'En cours'
       
     }
     
@@ -143,17 +144,17 @@ const [index2, setIndex2] = useState(0)
 
 const handleOnClick = (index) => { 
   
-  
-  gsap.fromTo('.projects_image_container', {duration: .5, x:0, y:0}, {duration: .5, x:850,y:300})
-  gsap.fromTo('.projects_headertruc', {duration: .5, x:0, y:0}, {duration: 1, x:-650,y:0})
+  // Out of screen
+  gsap.fromTo('.projects_image_container', {duration: .3, x:0, y:0}, {duration: .3, x:850,y:300})
+  gsap.fromTo('.projects_headertruc', {duration: .3, x:0, y:0}, {duration: .3, x:-650,y:0})
   
   setIndex2(index);
   setTimeout(() => {
 
     setIndex(index);
-    
-    gsap.fromTo('.projects_image_container',{duration: .5, x:850,y:200}, {duration: .5, x:0, y:0})
-    gsap.fromTo('.projects_headertruc',{duration: .5, x:-650,y:0}, {duration: .5, x:0, y:0})
+    // Back to screen
+    gsap.fromTo('.projects_image_container',{duration: .3, x:850,y:200}, {duration: .3, x:0, y:0})
+    gsap.fromTo('.projects_headertruc',{duration: .3, x:-650,y:0}, {duration: .3, x:0, y:0})
   }, 550);
 }
 
@@ -192,7 +193,7 @@ return (
           <div key={i} className="project_container">
             {index2 !== i &&
             <div className="project_content" onClick={() => handleOnClick(i)}>
-            <div>
+            <div className="project_content-left">
               <h3>{project.title}</h3>
               <h5>{project.stack}</h5>
               <div className="circle">

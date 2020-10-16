@@ -13,6 +13,25 @@ a {
   text-decoration: none;
   color: white
 }
+/* ABOUT */
+.about {
+  margin: 0 auto;
+  color: aliceblue;
+  width: 80%;
+}
+/* CONTACT */
+.contact {
+  color: aliceblue;
+  min-height: 84vh;
+  height: -webkit-fill-available;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-icons {
+  display: flex;
+
+}
 /* NAVBAR */
 .nav {
   min-height: 14vh;
@@ -320,15 +339,25 @@ a {
 .project_github span {
   margin-left: .5em;
 }
+@media screen and (max-width: 930px) {
+  .nav {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   .projects_image_wrapper { 
     display: none; 
   }
-  .projects_container { 
+  .projects{ 
     display: flex;
     flex-direction: column;
-    max-height: 52vh; 
+    
   }
+  .projects_container {
+    max-height: 64vh;
+    flex-wrap: wrap;  
+  }
+ 
   .project_content {  
     min-width: -webkit-fill-available;
     min-height: 9rem;
@@ -336,8 +365,13 @@ a {
     color: #fff;
     margin: .5em .5em;
     padding: 0.2em 1em 1em 1em;
+    
   }
-  .project_content2-container {  
+  .project_content-left {
+    position: relative;
+    z-index: 2;
+  }
+  .project_content2-container { 
     min-width: -webkit-fill-available;
     min-height: 9rem;
     height: 16vh;
@@ -346,12 +380,18 @@ a {
   }
   .project_content2_left h3 {
     margin: 0;
+    
   }
+  .project_content2_right {
+    display: none;
+  }
+  
   .project_content2_left h5{
-    font-size: 1.5em;
+    font-size: 1.2em;
+    
   }
   .project_container {
-    width: 100%;
+    width: 50%;
   }
   .projects_subtitle {
     font-size: 1.5rem; 
@@ -364,7 +404,7 @@ a {
     height: 30px;
   }
   .projects_header {
-    min-height: 40vh; 
+    min-height: 35vh; 
   }
   .nav_center {
     display: none;
